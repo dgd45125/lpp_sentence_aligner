@@ -12,45 +12,51 @@ An advanced alignment will scan OPUS for available parallel dictionaries and the
 
 
 
-<b>Dependencies:<b>
+<b>Dependencies:</b>
 
 os, re, sys, zipfile, shutil, pandas, subprocess, urllib, json, gzip
 
-<b>Usage<b>
 
-Arguments:
+
+<b>Arguments</b>:
 
 --help 
 
-	will print this help message.
+	Will print this help message
 
 --download-RosettaStone
 
-	will download the RosettaStone directory into the working directory
+	Will download the RosettaStone directory into the working directory
 
 --download-hunalign
 
-	will download and install hunalign into the working directory
+	Will download and install hunalign into the working directory
 
 --print-languages 
 
-	will print the languages available in the RosettaStone.
+	Will print the languages available in the RosettaStone
 
 --basic-alignment language1 language2
 
-	performs a basic alignment (no bilingual dictionary) between language1 and language2
+	Performs a basic alignment (no bilingual dictionary) between language1 and language2
+
 
 --advanced-alignment language1 language2
 
-	performs a basic alignment between language1 and language2 by searching OPUS for all available parallel dictonaries, converting the largest properly formatted one to hunalign format, and then providing it to hualign for the alignment.
+	Performs a basic alignment between language1 and language2 by searching OPUS for all available parallel dictonaries, converting the largest properly formatted one to hunalign format, and then providing it to hualign for the alignment
 
 
-Details:
+<b>Details</b>
+
+Performing an alignment will store the reconstructed sentences from the RosettaStone in the directories language1_prepped and language2_prepped, with one sentence per line and separate files for each section.
+
+The resulting alignments will be stored in the directory language1-language2_(basic|advanced)\_alignments depending on whether a basic or advanced alignment was performed.
+
+If an advanced alignment is performed, OPUS will be probed for available parallel bilingual dictionaries for the two languages. Each available dictionary is downloaded, the number of rows is recorded, and then the dictionary is deleted. The largest (heuristic for best) dictionary is then redownloaded and converted into the format desired by hunalign. This dictionary is saved into the working directory as lang2-lang1.dic. The downloaded dictionary is then deleted again. The hunalign-formatted dictionary is past to hunalign for the alignment process.
 
 
 
-
-References:
+<b>References:</b>
 
 Sabrina Stehwien, Lena Henke, Jon T. Hale, Jonathan Brennan, Lars Meyer (2020),
 The Little Prince in 26 Languages: Towards a Multilingual Neuro-Cognitive Corpus.
