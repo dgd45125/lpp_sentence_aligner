@@ -47,3 +47,18 @@ Sabrina Stehwien, Lena Henke, Jon T. Hale, Jonathan Brennan, Lars Meyer (2020),
 The Little Prince in 26 Languages: Towards a Multilingual Neuro-Cognitive Corpus.
 Workshop on Linguistic and Neurocognitive Resources (LiNCR 2020), pages 43-69.
 Language Resources and Evaluation Conference (LREC 2020), Marseille, France.
+
+
+
+Dependencies:
+
+os
+re
+sys
+zipfile
+shutil
+pandas
+subprocess
+urllib
+json
+gzip
