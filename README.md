@@ -43,7 +43,7 @@ os, re, sys, zipfile, shutil, pandas, subprocess, urllib, json, gzip
 
 --advanced-alignment language1 language2
 
-	Performs a basic alignment between language1 and language2 by searching OPUS for all available parallel dictonaries, converting the largest properly formatted one to hunalign format, and then providing it to hualign for the alignment
+	Performs a basic alignment between language1 and language2 by searching OPUS for all available parallel dictonaries, converting the largest properly formatted one to hunalign format, and then providing it to hunalign for the alignment
 
 
 <b>Details</b>
