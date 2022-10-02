@@ -1,3 +1,5 @@
+<b>Introduction</b>
+
 This is software which aligns sentences from two translations of "The Little Prince." 
 
 Under the hood, the hunalign utility is used for the alignment. Hunalign needs to be downloaded and installed in the working directory. Please see the --download-hunalign argument below. 
@@ -8,6 +10,13 @@ A simple alignment will run hunalign just using the available text sentences. Se
 
 An advanced alignment will scan OPUS for available parallel dictionaries and then use the longest one during the alignment process. It may be the case that the algorithm works better in one direction than the other (i.e., you may want to try both language1 -> language2 and language2 -> language1).
 
+
+
+<b>Dependencies:<b>
+
+os, re, sys, zipfile, shutil, pandas, subprocess, urllib, json, gzip
+
+<b>Usage<b>
 
 Arguments:
 
@@ -49,16 +58,3 @@ Workshop on Linguistic and Neurocognitive Resources (LiNCR 2020), pages 43-69.
 Language Resources and Evaluation Conference (LREC 2020), Marseille, France.
 
 
-
-Dependencies:
-
-os
-re
-sys
-zipfile
-shutil
-pandas
-subprocess
-urllib
-json
-gzip
