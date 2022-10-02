@@ -12,18 +12,31 @@ An advanced alignment will scan OPUS for available parallel dictionaries and the
 Arguments:
 
 --help 
+
 	will print this help message.
+
 --download-RosettaStone
+
 	will download the RosettaStone directory into the working directory
+
 --download-hunalign
+
 	will download and install hunalign into the working directory
+
 --print-languages 
+
 	will print the languages available in the RosettaStone.
+
 --basic-alignment language1 language2
+
 	performs a basic alignment (no bilingual dictionary) between language1 and language2
+
 --advanced-alignment language1 language2
+
 	performs a basic alignment between language1 and language2 by searching OPUS for all available parallel dictonaries, converting the largest properly formatted one to hunalign format, and then providing it to hualign for the alignment.
 
+
+Details:
 
 
 
