@@ -2,6 +2,8 @@
 
 This is software which aligns sentences from two translations of "The Little Prince." 
 
+<b>It is designed for Linux and macOS.</b>
+
 Under the hood, the hunalign utility is used for the alignment. Hunalign needs to be downloaded and installed in the working directory. Please see the --download-hunalign argument below. 
 
 The source material for the alignment is the first 6 sections of the story book texts. These occur in a "RosettaStone" and need to be present in the working directory. Please see the --download-RosettaStone argument below. To get a list of the languages available in the RosettaStone, see the --print-languages argument below.  
