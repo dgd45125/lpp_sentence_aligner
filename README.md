@@ -55,6 +55,14 @@ The resulting alignments will be stored in the directory language1-language2_(ba
 If an advanced alignment is performed, OPUS will be probed for available parallel bilingual dictionaries for the two languages. Each available dictionary is downloaded, the number of rows is recorded, and then the dictionary is deleted. The largest (heuristic for best) dictionary is then redownloaded and converted into the format desired by hunalign. This dictionary is saved into the working directory as lang2-lang1.dic. The downloaded dictionary is then deleted again. The hunalign-formatted dictionary is past to hunalign for the alignment process.
 
 
+<b>Examples</b>
+
+	./main.py --print-languages
+
+	./main.py --basic-alignment polish greek
+
+	./main.py --advanced-alignment polish greek
+
 
 <b>References:</b>
 
